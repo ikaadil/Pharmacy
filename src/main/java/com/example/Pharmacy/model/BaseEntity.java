@@ -2,16 +2,12 @@ package com.example.Pharmacy.model;
 
 import com.example.Pharmacy.enums.Status;
 import com.sun.corba.se.spi.ior.ObjectId;
-
-
-
 import java.io.Serializable;
 
 
 public class BaseEntity implements Serializable {
 
     private static final long serialVersionUID = 8571261118900116242L;
-
 
     private ObjectId id;
     private Status status = Status.V;
@@ -25,7 +21,6 @@ public class BaseEntity implements Serializable {
     public BaseEntity() {
     }
 
-
     public ObjectId getObjectId() {
         return id;
     }
@@ -34,13 +29,9 @@ public class BaseEntity implements Serializable {
         this.id = id;
     }
 
-
-
-
     public boolean isValid() {
         return status == Status.V ? true : false;
     }
-
 
     public String getCreateDate() {
         return createDate;
@@ -73,7 +64,6 @@ public class BaseEntity implements Serializable {
     public void setUpdatedBy(String updatedBy) {
         this.updatedBy = updatedBy;
     }
-
 
     public ObjectId getCreateActionId() {
         return createActionId;
